@@ -1,0 +1,81 @@
+Response : Value
+                Df Sum Sq Mean Sq F value Pr(>F)
+MODEL           17 10.700 0.62941  1.3977 0.1634
+RESIDUALS       72 32.422 0.45031               
+CORRECTED TOTAL 89 43.122                       
+[1] 72
+               Df Sum Sq Mean Sq F value Pr(>F)
+factor(Row)     9 4.6778 0.51975  1.1542 0.3373
+factor(Column)  8 6.0222 0.75278  1.6717 0.1202
+Response : Value
+                Df Sum Sq Mean Sq F value  Pr(>F)  
+MODEL           17 13.700 0.80588  2.1159 0.01483 *
+RESIDUALS       72 27.422 0.38086                  
+CORRECTED TOTAL 89 41.122                          
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+               Df Sum Sq Mean Sq F value  Pr(>F)  
+factor(Row)     9 8.6778 0.96420  2.5316 0.01393 *
+factor(Column)  8 5.0222 0.62778  1.6483 0.12635  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Response : Value
+                Df Sum Sq Mean Sq F value    Pr(>F)    
+MODEL           17 37.267 2.19216   5.798 4.799e-08 ***
+RESIDUALS       72 27.222 0.37809                      
+CORRECTED TOTAL 89 64.489                              
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+               Df Sum Sq Mean Sq F value    Pr(>F)    
+factor(Row)     9 25.378  2.8197  7.4580 1.294e-07 ***
+factor(Column)  8 11.889  1.4861  3.9306 0.0006705 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Response : Value
+                Df Sum Sq Mean Sq F value    Pr(>F)    
+MODEL           17 26.244 1.54379  6.8425 2.183e-09 ***
+RESIDUALS       72 16.244 0.22562                      
+CORRECTED TOTAL 89 42.489                              
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+               Df  Sum Sq Mean Sq F value    Pr(>F)    
+factor(Row)     9 19.1556 2.12840  9.4337  2.49e-09 ***
+factor(Column)  8  7.0889 0.88611  3.9275 0.0006753 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Response : Value
+                Df  Sum Sq Mean Sq F value    Pr(>F)    
+MODEL           17 115.067  6.7686  6.0248 2.405e-08 ***
+RESIDUALS       72  80.889  1.1235                      
+CORRECTED TOTAL 89 195.956                              
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+               Df  Sum Sq Mean Sq F value    Pr(>F)    
+factor(Row)     9 103.511 11.5012 10.2374 5.553e-10 ***
+factor(Column)  8  11.556  1.4444  1.2857    0.2646    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Response : Value
+                Df  Sum Sq Mean Sq F value    Pr(>F)    
+MODEL           17  55.611  3.2712  3.4412 0.0001232 ***
+RESIDUALS       72  68.444  0.9506                      
+CORRECTED TOTAL 89 124.056                              
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+               Df Sum Sq Mean Sq F value    Pr(>F)    
+factor(Row)     9 46.056  5.1173  5.3831 1.278e-05 ***
+factor(Column)  8  9.556  1.1944  1.2565    0.2799    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Response : Value
+                Df  Sum Sq Mean Sq F value   Pr(>F)   
+MODEL           17  48.667  2.8628  2.7216 0.001662 **
+RESIDUALS       72  75.733  1.0518                    
+CORRECTED TOTAL 89 124.400                            
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+               Df Sum Sq Mean Sq F value   Pr(>F)   
+factor(Row)     9 23.067   2.563  2.4366 0.017655 * 
+factor(Column)  8 25.600   3.200  3.0423 0.005282 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

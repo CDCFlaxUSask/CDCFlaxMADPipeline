@@ -1,0 +1,12 @@
+The MAD pipeline program package is a software tool to analyze experimental data of the type 2 modified augmented design (MAD). The package combining SAS software and Perl scripts supports automated analyses for single MAD experiments and joint analyses for multiple experiments (years and locations). 
+
+The package includes five programs: 
+	(1) transpose_MAD_data.pl: This Perl program converts the MAD data from one table format (Table 2) to another table format (Table 1) which is used in the MADPipeline_Step1a.sas program.
+	(2) MADPipeline_Step1a.sas: This SAS program is to perform ANOVA of individual MAD experiments, in which two separate ANOVA for plot and subplot controls are performed separately. The output from this SAS program are used as input of a downstream Perl program, MADPipeline_Step1b.pl.
+	(3) MADPipeline_Step1b.pl: This program summarizes the ANOVA results from the SAS program MADPipeline_Step1a.sas, adjusts the observations of the test genotypes and controls, and estimates the RE of the different adjustment methods. Ultimately, a data file with adjusted values by the most appropriate adjustment method is exported for further analysis. If the same plot and subplot controls are used in multiple experiments, the adjusted values of the test genotypes and controls can be further used as input of the second SAS program, MADPipeline_Step2a.sas, for joint ANOVA over multiple environments.
+	(4) MADPipeline_Step2a.sas: This SAS program performs the joint ANOVA of MAD data over multiple environments if the same plot and subplot controls are used in all experiments.
+	(5) MADPipeline_Step2b.pl:  This program calculates the correct F values and performs the significance test based on the ANOVA results obtained from the SAS program MADPipeline_Step2a.sas.
+
+Please read the user's guide of the MAD anslysis pipeline package for details.
+
+ 

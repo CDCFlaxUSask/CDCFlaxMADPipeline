@@ -1,0 +1,271 @@
+Microsoft Windows [Version 10.0.18363.1198]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\rwm132>perl -v
+
+This is perl 5, version 28, subversion 1 (v5.28.1) built for MSWin32-x64-multi-thread
+(with 1 registered patch, see perl -V for more detail)
+
+Copyright 1987-2018, Larry Wall
+
+Binary build 0000 [58a1981e] provided by ActiveState http://www.ActiveState.com
+Built Apr 10 2020 17:28:14
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using "man perl" or "perldoc perl".  If you have access to the
+Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+
+
+C:\Users\rwm132>mkdir flax
+
+C:\Users\rwm132>cd flax
+
+C:\Users\rwm132\flax>mkdir BREEDING_STATISTICS
+
+C:\Users\rwm132\flax>cpan
+Can't locate Win32/Console.pm in @INC (you may need to install the Win32::Console module) (@INC contains: C:\Perl64\site\lib C:\Perl64\lib) at C:\Perl64\site\lib/ActivePerl/Config.pm line 400.
+Compilation failed in require at C:\Perl64\site\lib/ExtUtils/MakeMaker.pm line 9.
+BEGIN failed--compilation aborted at C:\Perl64\site\lib/ExtUtils/MakeMaker.pm line 9.
+Compilation failed in require at C:/Perl64/lib/CPAN.pm line 48.
+BEGIN failed--compilation aborted at C:/Perl64/lib/CPAN.pm line 48.
+Compilation failed in require at C:/Perl64/lib/App/Cpan.pm line 288.
+BEGIN failed--compilation aborted at C:/Perl64/lib/App/Cpan.pm line 288.
+Compilation failed in require at C:\Perl64\bin/cpan.bat line 23.
+BEGIN failed--compilation aborted at C:\Perl64\bin/cpan.bat line 23.
+
+C:\Users\rwm132\flax>cpan Statistics::Distributions
+Can't locate Win32/Console.pm in @INC (you may need to install the Win32::Console module) (@INC contains: C:\Perl64\site\lib C:\Perl64\lib) at C:\Perl64\site\lib/ActivePerl/Config.pm line 400.
+Compilation failed in require at C:\Perl64\site\lib/ExtUtils/MakeMaker.pm line 9.
+BEGIN failed--compilation aborted at C:\Perl64\site\lib/ExtUtils/MakeMaker.pm line 9.
+Compilation failed in require at C:/Perl64/lib/CPAN.pm line 48.
+BEGIN failed--compilation aborted at C:/Perl64/lib/CPAN.pm line 48.
+Compilation failed in require at C:/Perl64/lib/App/Cpan.pm line 288.
+BEGIN failed--compilation aborted at C:/Perl64/lib/App/Cpan.pm line 288.
+Compilation failed in require at C:\Perl64\bin/cpan.bat line 23.
+BEGIN failed--compilation aborted at C:\Perl64\bin/cpan.bat line 23.
+
+C:\Users\rwm132\flax>ppm install Statistics::Distributions
+PPM functionality is being replaced by the State Tool, which does things differently. For example, before you can start
+ managing dependencies, you need to create a new virtual environment for your Perl project.
+
+
+> Create Virtual Runtime Environment
+  Why is this necessary? I Just want to manage dependencies
+
+
+Updating state tool:  Downloading latest version of the state tool...
+
+
+Auto Update
+───────────
+Updated from 0.23.7-SHAb03998f to 0.23.78-SHA8b30682.
+To avoid auto updating run 'state update --lock' (only recommended for production environments).
+
+╔════════════════════════════════╗
+║ Running "New Project" Tutorial ║
+╚════════════════════════════════╝
+In order to create a virtual environment you must have an ActiveState Platform account
+
+> Sign In
+  Create Account via Command Line
+  Create Account via Browser
+
+
+Invoking `state auth` ...
+------------------------------------------------------------------------------------------------------------------------
+╔════════════════════════════════════════╗
+║ Signing In To The ActiveState Platform ║
+╚════════════════════════════════════════╝
+ Invalid response: value required
+Enter your username:
+> merrittr
+Enter your password:
+> **************
+
+
+Authentication
+──────────────
+You have successfully authenticated, hello merrittr!
+You are logged in as merrittr
+------------------------------------------------------------------------------------------------------------------------
+
+What do you want to name your project?
+
+  Perl
+> Other ..
+                                                                                                                        > madpipeline
+Where would you like your project directory to be mapped? This is usually the root of your repository, or the place whe
+
+re you have your project dotfiles.
+
+  C:\Users\rwm132
+> Other ..
+                                                                                                                        > C:\Users\rwm132\flax\madpipeline
+
+Invoking `state init merrittr/madpipeline perl --path C:\Users\rwm132\flax\madpipeline` ...
+------------------------------------------------------------------------------------------------------------------------
+╔══════════════════════╗
+║ Initializing Project ║
+╚══════════════════════╝
+Project 'merrittr/madpipeline' has been successfully initialized at
+'C:\Users\rwm132\flax\madpipeline'.
+You should run `state push` before activating your project for the first time.
+Once pushed you can activate your project with `state activate`.
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+Invoking `state push` ...
+------------------------------------------------------------------------------------------------------------------------
+╔═══════════════════════╗
+║ Pushing Local Project ║
+╚═══════════════════════╝
+Creating project madpipeline under merrittr on the ActiveState Platform
+Project created at
+https://platform.activestate.com/merrittr/madpipeline?commitID=74efeb52-6cce-4171-812c-9e76b3077a06 with
+language perl
+------------------------------------------------------------------------------------------------------------------------
+
+Your Virtual Runtime Environment has been created.
+
+To start using your project simply run `state activate` from your project directory at
+C:\Users\rwm132\flax\madpipeline. You can also manage your project in your browser at
+https://platform.activestate.com/merrittr/madpipeline.
+
+To create another project run `state init`, or if you want to find out more about the State Tool and
+what it can do run `state --help` or check out
+http://docs.activestate.com/platform/state/
+
+Please navigate to your newly created project directory and run `ppm install` again.
+You can also run `state install` directly instead of running `ppm install`,
+which will soon be deprecated.
+
+
+C:\Users\rwm132\flax>state install Statistics::Distributions
+╔════════════════════╗
+║ Installing Package ║
+╚════════════════════╝
+
+Something Went Wrong
+────────────────────
+ x To run this command you need to be in an existing project. You can create a new project with
+state init or run this command from a directory that is in an existing project. You can also mark a
+project as the default to use by running `state activate --default` inside your project directory.
+
+Need More Help?
+───────────────
+ • Run → `state install --help` for general help
+ • Visit the Forum → https://community.activestate.com/c/state-tool/
+
+C:\Users\rwm132\flax>cd madpipeline
+
+C:\Users\rwm132\flax\madpipeline>state activate --default
+╔════════════════════════════════╗
+║ Activating Virtual Environment ║
+╚════════════════════════════════╝
+
+Downloading missing artifacts
+─────────────────────────────
+Downloading  1 / 1
+
+Updating missing artifacts
+──────────────────────────
+Installing  1 / 1
+                  [==============================================================================] 100 %
+
+Global Default
+──────────────
+Successfully configured merrittr/madpipeline as the global default project.
+
+Running Activation Events
+─────────────────────────
+You are now in an activated state, which is like a virtual environment to work
+in that doesn't affect the rest of your system. To leave, run `exit`.
+
+What's next?
+- To learn more about what you can do, run → `state --help`
+- To modify this runtime like adding packages or platforms, visit https://platform.activestate.com/merrittr/madpipeline
+
+╔═══════════════════╗
+║ You're Activated! ║
+╚═══════════════════╝
+
+[merrittr/madpipeline] C:\Users\rwm132\flax\madpipeline>state install Statistics::Regression
+╔════════════════════╗
+║ Installing Package ║
+╚════════════════════╝
+
+Updating Runtime
+────────────────
+Changes to your runtime may require some dependencies to be rebuilt.
+
+Statistics-Regression includes 0 dependencies, for a combined total of 56 dependencies.
+
+Something Went Wrong
+────────────────────
+ x Could not install dependencies
+ x The project is currently building. Please visit
+https://platform.activestate.com/merrittr/madpipeline to see the progress.
+
+Need More Help?
+───────────────
+ • Run → `state install --help` for general help
+ • Visit the Forum → https://community.activestate.com/c/state-tool/
+
+[merrittr/madpipeline] C:\Users\rwm132\flax\madpipeline>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C:\Users\rwm132\flax\madpipeline>state activate --default
+╔════════════════════════════════╗
+║ Activating Virtual Environment ║
+╚════════════════════════════════╝
+Reusing cached runtime environment
+
+Global Default
+──────────────
+Successfully configured merrittr/madpipeline as the global default project.
+
+Running Activation Events
+─────────────────────────
+You are now in an activated state, which is like a virtual environment to work
+in that doesn't affect the rest of your system. To leave, run `exit`.
+
+What's next?
+- To learn more about what you can do, run → `state --help`
+- To modify this runtime like adding packages or platforms, visit https://platform.activestate.com/merrittr/madpipeline
+
+╔═══════════════════╗
+║ You're Activated! ║
+╚═══════════════════╝
+
+[merrittr/madpipeline] C:\Users\rwm132\flax\madpipeline>perl MADPipeline_Step1b.pl -i BxN_Preston_Wilt_Data_2019_for_MAD.txt_converted.txt
+Can't locate Statistics/Distributions.pm in @INC (you may need to install the Statistics::Distributions module) (@INC contains: C:/Users/rwm132/AppData/Local/activestate/57dd5cda/site/lib C:/Users/rwm132/AppData/Local/activestate/57dd5cda/lib) at MADPipeline_Step1b.pl line 39.
+BEGIN failed--compilation aborted at MADPipeline_Step1b.pl line 39.
+
+[merrittr/madpipeline] C:\Users\rwm132\flax\madpipeline>

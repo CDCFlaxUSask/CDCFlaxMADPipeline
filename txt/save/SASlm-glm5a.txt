@@ -1,0 +1,270 @@
+$STD
+$STD$ANOVA
+Response : Value.x
+                Df Sum Sq Mean Sq F value Pr(>F)
+MODEL            4 4.4444 1.11111  1.8182 0.2884
+RESIDUALS        4 2.4444 0.61111               
+CORRECTED TOTAL  8 6.8889                       
+
+$STD$`Type I`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 4.2222 2.11111  3.4545 0.1344
+factor(Genotype.x)  2 0.2222 0.11111  0.1818 0.8403
+
+$STD$`Type II`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 4.2222 2.11111  3.4545 0.1344
+factor(Genotype.x)  2 0.2222 0.11111  0.1818 0.8403
+
+$STD$`Type III`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 4.2222 2.11111  3.4545 0.1344
+factor(Genotype.x)  2 0.2222 0.11111  0.1818 0.8403
+
+$STD$Parameter
+                           Estimate Std. Error t value Pr(>|t|)   
+(Intercept)                  3.2222    0.58267  5.5301 0.005224 **
+factor(Whole_plot)6 + 7      1.0000    0.63828  1.5667 0.192249   
+factor(Whole_plot)7 + 8     -0.6667    0.63828 -1.0445 0.355232   
+factor(Whole_plot)9 + 3      0.0000    0.00000                    
+factor(Genotype.x)Flanders  -0.3333    0.63828 -0.5222 0.629095   
+factor(Genotype.x)NorLin    -0.3333    0.63828 -0.5222 0.629095   
+factor(Genotype.x)Novelty    0.0000    0.00000                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+$V1
+$V1$ANOVA
+Response : Value.x
+                Df Sum Sq Mean Sq F value Pr(>F)
+MODEL            4 5.1111 1.27778  2.0909 0.2463
+RESIDUALS        4 2.4444 0.61111               
+CORRECTED TOTAL  8 7.5556                       
+
+$V1$`Type I`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 0.8889 0.44444  0.7273 0.5378
+factor(Genotype.x)  2 4.2222 2.11111  3.4545 0.1344
+
+$V1$`Type II`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 0.8889 0.44444  0.7273 0.5378
+factor(Genotype.x)  2 4.2222 2.11111  3.4545 0.1344
+
+$V1$`Type III`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 0.8889 0.44444  0.7273 0.5378
+factor(Genotype.x)  2 4.2222 2.11111  3.4545 0.1344
+
+$V1$Parameter
+                           Estimate Std. Error t value Pr(>|t|)   
+(Intercept)                  3.7778    0.58267  6.4835 0.002917 **
+factor(Whole_plot)6 + 7      0.6667    0.63828  1.0445 0.355232   
+factor(Whole_plot)7 + 8      0.0000    0.63828  0.0000 1.000000   
+factor(Whole_plot)9 + 3      0.0000    0.00000                    
+factor(Genotype.x)Flanders  -0.6667    0.63828 -1.0445 0.355232   
+factor(Genotype.x)NorLin    -1.6667    0.63828 -2.6112 0.059347 . 
+factor(Genotype.x)Novelty    0.0000    0.00000                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+$V2
+$V2$ANOVA
+Response : Value.x
+                Df Sum Sq Mean Sq F value Pr(>F)
+MODEL            4 3.7778 0.94444     3.4 0.1315
+RESIDUALS        4 1.1111 0.27778               
+CORRECTED TOTAL  8 4.8889                       
+
+$V2$`Type I`
+                   Df  Sum Sq Mean Sq F value  Pr(>F)  
+factor(Whole_plot)  2 0.88889 0.44444     1.6 0.30864  
+factor(Genotype.x)  2 2.88889 1.44444     5.2 0.07716 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$V2$`Type II`
+                   Df  Sum Sq Mean Sq F value  Pr(>F)  
+factor(Whole_plot)  2 0.88889 0.44444     1.6 0.30864  
+factor(Genotype.x)  2 2.88889 1.44444     5.2 0.07716 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$V2$`Type III`
+                   Df  Sum Sq Mean Sq F value  Pr(>F)  
+factor(Whole_plot)  2 0.88889 0.44444     1.6 0.30864  
+factor(Genotype.x)  2 2.88889 1.44444     5.2 0.07716 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$V2$Parameter
+                           Estimate Std. Error t value  Pr(>|t|)    
+(Intercept)                  3.4444    0.39284  8.7681 0.0009328 ***
+factor(Whole_plot)6 + 7      0.0000    0.43033  0.0000 1.0000000    
+factor(Whole_plot)7 + 8      0.6667    0.43033  1.5492 0.1962612    
+factor(Whole_plot)9 + 3      0.0000    0.00000                      
+factor(Genotype.x)Flanders  -1.0000    0.43033 -2.3238 0.0808001 .  
+factor(Genotype.x)NorLin    -1.3333    0.43033 -3.0984 0.0362778 *  
+factor(Genotype.x)Novelty    0.0000    0.00000                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+$V3
+$V3$ANOVA
+Response : Value.x
+                Df  Sum Sq Mean Sq F value Pr(>F)
+MODEL            4 1.77778 0.44444       4  0.104
+RESIDUALS        4 0.44444 0.11111               
+CORRECTED TOTAL  8 2.22222                       
+
+$V3$`Type I`
+                   Df  Sum Sq Mean Sq F value  Pr(>F)  
+factor(Whole_plot)  2 0.22222 0.11111       1 0.44444  
+factor(Genotype.x)  2 1.55556 0.77778       7 0.04938 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$V3$`Type II`
+                   Df  Sum Sq Mean Sq F value  Pr(>F)  
+factor(Whole_plot)  2 0.22222 0.11111       1 0.44444  
+factor(Genotype.x)  2 1.55556 0.77778       7 0.04938 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$V3$`Type III`
+                   Df  Sum Sq Mean Sq F value  Pr(>F)  
+factor(Whole_plot)  2 0.22222 0.11111       1 0.44444  
+factor(Genotype.x)  2 1.55556 0.77778       7 0.04938 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$V3$Parameter
+                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                 3.11111    0.24845 12.5220 0.000234 ***
+factor(Whole_plot)6 + 7     0.00000    0.27217  0.0000 1.000000    
+factor(Whole_plot)7 + 8    -0.33333    0.27217 -1.2247 0.287864    
+factor(Whole_plot)9 + 3     0.00000    0.00000                     
+factor(Genotype.x)Flanders -0.33333    0.27217 -1.2247 0.287864    
+factor(Genotype.x)NorLin   -1.00000    0.27217 -3.6742 0.021312 *  
+factor(Genotype.x)Novelty   0.00000    0.00000                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+$W1
+$W1$ANOVA
+Response : Value.x
+                Df Sum Sq Mean Sq F value Pr(>F)
+MODEL            4  7.778  1.9444  0.2941 0.8685
+RESIDUALS        4 26.444  6.6111               
+CORRECTED TOTAL  8 34.222                       
+
+$W1$`Type I`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 3.5556  1.7778  0.2689 0.7770
+factor(Genotype.x)  2 4.2222  2.1111  0.3193 0.7436
+
+$W1$`Type II`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 3.5556  1.7778  0.2689 0.7770
+factor(Genotype.x)  2 4.2222  2.1111  0.3193 0.7436
+
+$W1$`Type III`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 3.5556  1.7778  0.2689 0.7770
+factor(Genotype.x)  2 4.2222  2.1111  0.3193 0.7436
+
+$W1$Parameter
+                           Estimate Std. Error t value Pr(>|t|)
+(Intercept)                 1.77778     1.9165  0.9276   0.4061
+factor(Whole_plot)6 + 7     1.33333     2.0994  0.6351   0.5599
+factor(Whole_plot)7 + 8     1.33333     2.0994  0.6351   0.5599
+factor(Whole_plot)9 + 3     0.00000     0.0000                 
+factor(Genotype.x)Flanders -1.00000     2.0994 -0.4763   0.6587
+factor(Genotype.x)NorLin    0.66667     2.0994  0.3176   0.7667
+factor(Genotype.x)Novelty   0.00000     0.0000                 
+
+
+$W2
+$W2$ANOVA
+Response : Value.x
+                Df  Sum Sq Mean Sq F value  Pr(>F)  
+MODEL            4 17.1111  4.2778  4.5294 0.08629 .
+RESIDUALS        4  3.7778  0.9444                  
+CORRECTED TOTAL  8 20.8889                          
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$W2$`Type I`
+                   Df  Sum Sq Mean Sq F value  Pr(>F)  
+factor(Whole_plot)  2  6.2222  3.1111  3.2941 0.14272  
+factor(Genotype.x)  2 10.8889  5.4444  5.7647 0.06635 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$W2$`Type II`
+                   Df  Sum Sq Mean Sq F value  Pr(>F)  
+factor(Whole_plot)  2  6.2222  3.1111  3.2941 0.14272  
+factor(Genotype.x)  2 10.8889  5.4444  5.7647 0.06635 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$W2$`Type III`
+                   Df  Sum Sq Mean Sq F value  Pr(>F)  
+factor(Whole_plot)  2  6.2222  3.1111  3.2941 0.14272  
+factor(Genotype.x)  2 10.8889  5.4444  5.7647 0.06635 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$W2$Parameter
+                           Estimate Std. Error t value Pr(>|t|)   
+(Intercept)                  5.1111    0.72436  7.0561 0.002128 **
+factor(Whole_plot)6 + 7     -0.6667    0.79349 -0.8402 0.448100   
+factor(Whole_plot)7 + 8      1.3333    0.79349  1.6803 0.168189   
+factor(Whole_plot)9 + 3      0.0000    0.00000                    
+factor(Genotype.x)Flanders  -2.6667    0.79349 -3.3607 0.028287 * 
+factor(Genotype.x)NorLin    -1.6667    0.79349 -2.1004 0.103604   
+factor(Genotype.x)Novelty    0.0000    0.00000                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+$W3
+$W3$ANOVA
+Response : Value.x
+                Df Sum Sq Mean Sq F value Pr(>F)
+MODEL            4 13.111  3.2778  1.2553 0.4155
+RESIDUALS        4 10.444  2.6111               
+CORRECTED TOTAL  8 23.556                       
+
+$W3$`Type I`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 3.5556  1.7778  0.6809 0.5566
+factor(Genotype.x)  2 9.5556  4.7778  1.8298 0.2727
+
+$W3$`Type II`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 3.5556  1.7778  0.6809 0.5566
+factor(Genotype.x)  2 9.5556  4.7778  1.8298 0.2727
+
+$W3$`Type III`
+                   Df Sum Sq Mean Sq F value Pr(>F)
+factor(Whole_plot)  2 3.5556  1.7778  0.6809 0.5566
+factor(Genotype.x)  2 9.5556  4.7778  1.8298 0.2727
+
+$W3$Parameter
+                           Estimate Std. Error t value Pr(>|t|)  
+(Intercept)                  5.1111     1.2044  4.2436  0.01323 *
+factor(Whole_plot)6 + 7     -1.3333     1.3194 -1.0106  0.36938  
+factor(Whole_plot)7 + 8      0.0000     1.3194  0.0000  1.00000  
+factor(Whole_plot)9 + 3      0.0000     0.0000                   
+factor(Genotype.x)Flanders  -2.0000     1.3194 -1.5159  0.20414  
+factor(Genotype.x)NorLin    -2.3333     1.3194 -1.7685  0.15170  
+factor(Genotype.x)Novelty    0.0000     0.0000                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
