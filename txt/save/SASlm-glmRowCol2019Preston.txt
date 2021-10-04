@@ -1,0 +1,2 @@
+Year,Location,Type,Df,Sum Sq,Mean Sq,F value,Pr(>F)
+2019,Preston,STD,72,32.4222222222223,0.450308641975309,NA,NA

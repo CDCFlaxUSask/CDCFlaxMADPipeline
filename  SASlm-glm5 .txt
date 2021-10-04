@@ -1,0 +1,55 @@
+$ANOVA
+Response : Value
+                  Df  Sum Sq Mean Sq F value    Pr(>F)    
+MODEL             17   295.9  17.406  7.3943 < 2.2e-16 ***
+RESIDUALS       5652 13304.6   2.354                      
+CORRECTED TOTAL 5669 13600.6                              
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Type I`
+               Df  Sum Sq Mean Sq F value Pr(>F)    
+factor(Row)     9 252.922 28.1024 11.9383 <2e-16 ***
+factor(Column)  8  42.981  5.3727  2.2824 0.0195 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Type II`
+               Df  Sum Sq Mean Sq F value Pr(>F)    
+factor(Row)     9 252.922 28.1024 11.9383 <2e-16 ***
+factor(Column)  8  42.981  5.3727  2.2824 0.0195 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$`Type III`
+               Df  Sum Sq Mean Sq F value Pr(>F)    
+factor(Row)     9 252.922 28.1024 11.9383 <2e-16 ***
+factor(Column)  8  42.981  5.3727  2.2824 0.0195 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$Parameter
+                Estimate Std. Error t value  Pr(>|t|)    
+(Intercept)      2.67319   0.086446 30.9232 < 2.2e-16 ***
+factor(Row)1     0.52557   0.091122  5.7678 8.458e-09 ***
+factor(Row)10    0.35450   0.091122  3.8904 0.0001012 ***
+factor(Row)2     0.12346   0.091122  1.3548 0.1755198    
+factor(Row)3     0.36508   0.091122  4.0065 6.242e-05 ***
+factor(Row)4     0.21517   0.091122  2.3613 0.0182443 *  
+factor(Row)5     0.06526   0.091122  0.7161 0.4739379    
+factor(Row)6    -0.20282   0.091122 -2.2258 0.0260653 *  
+factor(Row)7     0.13404   0.091122  1.4710 0.1413525    
+factor(Row)8    -0.08995   0.091122 -0.9871 0.3236338    
+factor(Row)9     0.00000   0.000000                      
+factor(Column)1  0.01429   0.086446  0.1653 0.8687486    
+factor(Column)2  0.13016   0.086446  1.5057 0.1322094    
+factor(Column)3  0.09365   0.086446  1.0833 0.2787023    
+factor(Column)4  0.07937   0.086446  0.9181 0.3586122    
+factor(Column)5 -0.07302   0.086446 -0.8446 0.3983473    
+factor(Column)6 -0.16984   0.086446 -1.9647 0.0494970 *  
+factor(Column)7  0.06508   0.086446  0.7528 0.4515823    
+factor(Column)8  0.02381   0.086446  0.2754 0.7829988    
+factor(Column)9  0.00000   0.000000                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+

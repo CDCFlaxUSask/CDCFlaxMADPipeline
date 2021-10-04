@@ -1,0 +1,32 @@
+
+(1) As your subplot control is only one genotype with two replications, so the subplot data analysis had to be revised according to the standard design (You et al. 2013). However, your other two CKs can not be used because they were randomly located different plots and can not be integrated into sunplot control analysis. The modified statistical model is shown in the attached image.
+
+(2) The revised new pipeline specific for your data is attached.
+
+(3) Your data has some problems for running the pipeline: all missing data must be "." (SAS format), not "0" or "NA". The modified data is also attached. this file is for Step 1 ANOVA using SAS. 
+
+(4) I tested your data (two years, two traits for each year). Th results are attached for your review.
+
+You may try the pipeline first and we can discuss it next week when you come.
+
+Procedure:
+1. run the sas program in the SAS system. This step will generate two output files: unadjusted_plot_anova_stats.txt and unadjusted_subplot_anova_stats.txt
+
+2. run the perl program: 
+
+perl MADPipeline_Step1b-design3.pl -i raw_data_file (which was used for SAS ANOVA analysis). 
+
+The two files produced in the first SAS step will be located in the same folder.
+
+Please let me know if you have any question.
+
+Gaofeng, you may try it first and  show Raja how to do it.
+
+Have a nice weekend.
+
+
+ 2010  perl transpose_MAD_data.pl -i multi_trait.txt
+ 2015  perl MADPipeline_Step1b.pl -i multi_trait.txt_converted.txt
+ 
+
+
