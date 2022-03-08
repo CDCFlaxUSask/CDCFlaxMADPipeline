@@ -222,6 +222,8 @@ if (correct)
     HeaderTXT <- paste("Year,Location,Type,Parameter,Df,Sum Sq,Mean Sq,F value,Pr(>F)",sep=",")
     
     filename2<-paste(csvdir,"unadjusted_subplot_anova_stats",Year,Location,".csv",sep="")
+    subplot_anova_file<-filename2
+    
     write(c("Year,Location,Type,Parameter,Df,Sum Sq,Mean Sq,F value,Pr(>F)"), file=filename2,append=FALSE)
     
     outline<-paste(Year,Location,"STD,ERROR_WG",x5$STD$ANOVA[[2]][[1]],x5$STD$ANOVA[[5]][[1]],x5$STD$ANOVA[[8]][[1]],x5$STD$ANOVA[[11]][[1]],x5$STD$ANOVA[[14]][[1]],sep=",")
@@ -234,7 +236,7 @@ if (correct)
     
     filename2<-paste(csvdir,"unadjusted_subplot_anova_stats",Year,Location,".csv",sep="")
     outline<-paste(Year,Location,"V1,ERROR_WG",x5$V1$ANOVA[[2]][[1]],x5$V1$ANOVA[[5]][[1]],x5$V1$ANOVA[[8]][[1]],x5$V1$ANOVA[[11]][[1]],x5$V1$ANOVA[[14]][[1]],sep=",")
-    outline1<-paste(Year,Location,"V1,",x5$V1$`Type III`[[1]][[1]],x5$V1$`Type III`[[3]][[1]],x5$V1$`Type III`[[5]][[1]],x5$V1$`Type III`[[7]][[1]],x5$V1$`Type III`[[9]][[1]],sep=",")
+    outline1<-paste(Year,Location,"V1,Whole_Plot",x5$V1$`Type III`[[1]][[1]],x5$V1$`Type III`[[3]][[1]],x5$V1$`Type III`[[5]][[1]],x5$V1$`Type III`[[7]][[1]],x5$V1$`Type III`[[9]][[1]],sep=",")
     outline2<-paste(Year,Location,"V1,Genotype",x5$V1$`Type III`[[2]][[1]],x5$V1$`Type III`[[4]][[1]],x5$V1$`Type III`[[6]][[1]],x5$V1$`Type III`[[8]][[1]],x5$V1$`Type III`[[10]][[1]],sep=",")
     write(outline, file=filename2,append=TRUE)
     write(outline1, file=filename2,append=TRUE)
@@ -242,7 +244,7 @@ if (correct)
     
     filename2<-paste(csvdir,"unadjusted_subplot_anova_stats",Year,Location,".csv",sep="")
     outline<-paste(Year,Location,"V2,ERROR_WG",x5$V2$ANOVA[[2]][[1]],x5$V2$ANOVA[[5]][[1]],x5$V2$ANOVA[[8]][[1]],x5$V2$ANOVA[[11]][[1]],x5$V2$ANOVA[[14]][[1]],sep=",")
-    outline1<-paste(Year,Location,"V2,While_Plot",x5$V2$`Type III`[[1]][[1]],x5$V2$`Type III`[[3]][[1]],x5$V2$`Type III`[[5]][[1]],x5$V2$`Type III`[[7]][[1]],x5$V2$`Type III`[[9]][[1]],sep=",")
+    outline1<-paste(Year,Location,"V2,Whole_Plot",x5$V2$`Type III`[[1]][[1]],x5$V2$`Type III`[[3]][[1]],x5$V2$`Type III`[[5]][[1]],x5$V2$`Type III`[[7]][[1]],x5$V2$`Type III`[[9]][[1]],sep=",")
     outline2<-paste(Year,Location,"V2,Genotype",x5$V2$`Type III`[[2]][[1]],x5$V2$`Type III`[[4]][[1]],x5$V2$`Type III`[[6]][[1]],x5$V2$`Type III`[[8]][[1]],x5$V2$`Type III`[[10]][[1]],sep=",")
     write(outline, file=filename2,append=TRUE)
     write(outline1, file=filename2,append=TRUE)
@@ -250,7 +252,7 @@ if (correct)
     
     filename2<-paste(csvdir,"unadjusted_subplot_anova_stats",Year,Location,".csv",sep="")
     outline<-paste(Year,Location,"V3,ERROR_WG",x5$V3$ANOVA[[2]][[1]],x5$V3$ANOVA[[5]][[1]],x5$V3$ANOVA[[8]][[1]],x5$V3$ANOVA[[11]][[1]],x5$V3$ANOVA[[14]][[1]],sep=",")
-    outline1<-paste(Year,Location,"V3,While_Plot",x5$V3$`Type III`[[1]][[1]],x5$V3$`Type III`[[3]][[1]],x5$V3$`Type III`[[5]][[1]],x5$V3$`Type III`[[7]][[1]],x5$V3$`Type III`[[9]][[1]],sep=",")
+    outline1<-paste(Year,Location,"V3,Whole_Plot",x5$V3$`Type III`[[1]][[1]],x5$V3$`Type III`[[3]][[1]],x5$V3$`Type III`[[5]][[1]],x5$V3$`Type III`[[7]][[1]],x5$V3$`Type III`[[9]][[1]],sep=",")
     outline2<-paste(Year,Location,"V3,Genotype",x5$V3$`Type III`[[2]][[1]],x5$V3$`Type III`[[4]][[1]],x5$V3$`Type III`[[6]][[1]],x5$V3$`Type III`[[8]][[1]],x5$V3$`Type III`[[10]][[1]],sep=",")
     write(outline, file=filename2,append=TRUE)
     write(outline1, file=filename2,append=TRUE)
@@ -258,7 +260,7 @@ if (correct)
     
     filename2<-paste(csvdir,"unadjusted_subplot_anova_stats",Year,Location,".csv",sep="")
     outline<-paste(Year,Location,"W1,ERROR_WG",x5$W1$ANOVA[[2]][[1]],x5$W1$ANOVA[[5]][[1]],x5$W1$ANOVA[[8]][[1]],x5$W1$ANOVA[[11]][[1]],x5$W1$ANOVA[[14]][[1]],sep=",")
-    outline1<-paste(Year,Location,"W1,While_Plot",x5$W1$`Type III`[[1]][[1]],x5$W1$`Type III`[[3]][[1]],x5$W1$`Type III`[[5]][[1]],x5$W1$`Type III`[[7]][[1]],x5$W1$`Type III`[[9]][[1]],sep=",")
+    outline1<-paste(Year,Location,"W1,Whole_Plot",x5$W1$`Type III`[[1]][[1]],x5$W1$`Type III`[[3]][[1]],x5$W1$`Type III`[[5]][[1]],x5$W1$`Type III`[[7]][[1]],x5$W1$`Type III`[[9]][[1]],sep=",")
     outline2<-paste(Year,Location,"W1,Genotype",x5$W1$`Type III`[[2]][[1]],x5$W1$`Type III`[[4]][[1]],x5$W1$`Type III`[[6]][[1]],x5$W1$`Type III`[[8]][[1]],x5$W1$`Type III`[[10]][[1]],sep=",")
     write(outline, file=filename2,append=TRUE)
     write(outline1, file=filename2,append=TRUE)
@@ -266,7 +268,7 @@ if (correct)
     
     filename2<-paste(csvdir,"unadjusted_subplot_anova_stats",Year,Location,".csv",sep="")
     outline<-paste(Year,Location,"W2,ERROR_WG",x5$W2$ANOVA[[2]][[1]],x5$W2$ANOVA[[5]][[1]],x5$W2$ANOVA[[8]][[1]],x5$W2$ANOVA[[11]][[1]],x5$W2$ANOVA[[14]][[1]],sep=",")
-    outline1<-paste(Year,Location,"W2,While_Plot",x5$W2$`Type III`[[1]][[1]],x5$W2$`Type III`[[3]][[1]],x5$W2$`Type III`[[5]][[1]],x5$W2$`Type III`[[7]][[1]],x5$W2$`Type III`[[9]][[1]],sep=",")
+    outline1<-paste(Year,Location,"W2,Whole_Plot",x5$W2$`Type III`[[1]][[1]],x5$W2$`Type III`[[3]][[1]],x5$W2$`Type III`[[5]][[1]],x5$W2$`Type III`[[7]][[1]],x5$W2$`Type III`[[9]][[1]],sep=",")
     outline2<-paste(Year,Location,"W2,Genotype",x5$W2$`Type III`[[2]][[1]],x5$W2$`Type III`[[4]][[1]],x5$W2$`Type III`[[6]][[1]],x5$W2$`Type III`[[8]][[1]],x5$W2$`Type III`[[10]][[1]],sep=",")
     write(outline, file=filename2,append=TRUE)
     write(outline1, file=filename2,append=TRUE)
@@ -274,7 +276,7 @@ if (correct)
     
     filename2<-paste(csvdir,"unadjusted_subplot_anova_stats",Year,Location,".csv",sep="")
     outline<-paste(Year,Location,"W3,ERROR_WG",x5$W3$ANOVA[[2]][[1]],x5$W3$ANOVA[[5]][[1]],x5$W3$ANOVA[[8]][[1]],x5$W3$ANOVA[[11]][[1]],x5$W3$ANOVA[[14]][[1]],sep=",")
-    outline1<-paste(Year,Location,"W3,While_Plot",x5$W3$`Type III`[[1]][[1]],x5$W3$`Type III`[[3]][[1]],x5$W3$`Type III`[[5]][[1]],x5$W3$`Type III`[[7]][[1]],x5$W3$`Type III`[[9]][[1]],sep=",")
+    outline1<-paste(Year,Location,"W3,Whole_Plot",x5$W3$`Type III`[[1]][[1]],x5$W3$`Type III`[[3]][[1]],x5$W3$`Type III`[[5]][[1]],x5$W3$`Type III`[[7]][[1]],x5$W3$`Type III`[[9]][[1]],sep=",")
     outline2<-paste(Year,Location,"W3,Genotype",x5$W3$`Type III`[[2]][[1]],x5$W3$`Type III`[[4]][[1]],x5$W3$`Type III`[[6]][[1]],x5$W3$`Type III`[[8]][[1]],x5$W3$`Type III`[[10]][[1]],sep=",")
     write(outline, file=filename2,append=TRUE)
     write(outline1, file=filename2,append=TRUE)
@@ -304,6 +306,8 @@ if (correct)
   }
   
   write.csv(DataConverted, file = paste(DataFileDir,"DataConverted",".csv"),row.names=FALSE)
+  write.csv(DataConverted, file = paste(DataFileDircsv,"aaaaDataConverted",".csv"),row.names=FALSE)
+  
   
   write.csv(data, file = paste(DataFileDir,"data",".csv"),row.names=FALSE)
   
@@ -553,6 +557,11 @@ if (correct)
   data_file$adjmth1 <- 0  
   data_file$adjmth3 <- 0
    
+  
+  
+  
+  #####MTH 1 and MTH3 ###################################################################################3
+  
    for(i in 1:nrow(data_file)) 
    {
      #i=9
@@ -597,9 +606,119 @@ if (correct)
        if (data_file[i,18] < 0 || is.na(data_file[i,18])) {data_file[i,18] <- 0}
        if (data_file[i,19] < 0 || is.na(data_file[i,19])) {data_file[i,19] <- 0}
      }
+     
+     
    }
   
-  write.csv(data_file, file = paste(DataFileDircsv,"MAD_adjusted_all_data_Method1and3.csv",sep=""),row.names=FALSE)
+  write.csv(data_file , file = paste(DataFileDircsv,"data_file_mth1_mth3",".csv"),row.names=FALSE)
+  #####MTH 1 and MTH3 ###################################################################################3 
+  
+  
+  
+  
+  
+  
+  
+  
+  #data_file$adjmth13x <- (data_file$adjmth3*100+0.5)/100
+  #write.csv(data_file, file = paste(DataFileDircsv,"MAD_adjusted_all_data_Method1and3.csv",sep=""),row.names=FALSE)
+  
+  
+  data_file$adjmth13 <- 0
+  #####MTH1+3 ###################################################################################
+  
+  for(i in 1:nrow(data_file)) 
+  {
+    #i=9
+    idis<-data_file[i,"IDX"]
+    ids<-p_reg_coes["ListID"]
+    idxpregcoes<-which(ids == idis)
+    
+    idisr<-data_file[i,"IDROW"]
+    idr<-p_row_means2["IDROW"]
+    idxrow<-which(idr == idisr)
+    
+    idisc<-data_file[i,"IDCOL"]
+    idc<-p_col_means2["IDCOL"]
+    idxcol<-which(idc == idisc)
+    
+    idisrc<-data_file[i,"IDROWCOL"]
+    idrc<-p_row_col_values["IDROWCOL"]
+    idxrowcol<-which(idrc == idisrc)
+    
+    if (data_file[i,18] == '.' || data_file[i,18] == 0) 
+    {
+      data_file[i,20] <- data_file[i,18]
+    }
+    else
+    {
+      if (p_reg_coes[idxpregcoes,"op"] && p_total_means[idxpregcoes,"Value"]) {
+        data_file[i,20] <- data_file[i,18] - p_reg_coes[idxpregcoes,"op"] * (xij - p_total_means[idxpregcoes,"Value"]);
+      }
+      
+      if (data_file[i,20] < 0 || is.na(data_file[i,20])) {data_file[i,20] <- 0}
+    }
+    
+    
+  }
+  
+
+  
+  
+  write.csv(data_file , file = paste(DataFileDircsv,"data_file_mth1+3",".csv"),row.names=FALSE)
+  
+  
+  
+  data_fileCRTL <- data_file
+  data_fileCRTL$CTRLGENOTYPE <- 0 #create an environment attribute in the dataframe
+  
+  
+  #if (data_fileCRTL$Cp == 1) 
+  #{
+  #  data_fileCRTL$CTRLGENOTYPE <- 1;
+  #}
+  #if (data_fileCRTL$Csp > 0) 
+  #{
+  #  data_fileCRTL$CTRLGENOTYPE <- 1;
+  #}
+  
+  data_fileCRTL <- transform(data_fileCRTL, CTRLGENOTYPE= ifelse(Cp==1 | Csp > 0, 1, 0))
+  
+  write.csv(data_fileCRTL , file = paste(DataFileDircsv,"data_file_mth1+3+crtl",".csv"),row.names=FALSE)
+  
+  data_fileCRTLFilter<-subset(data_fileCRTL, CTRLGENOTYPE==1)
+  
+  newdata <- data_fileCRTLFilter[c(16,12,18:20)]
+  
+  dput(head(newdata))
+  
+  
+  aggregate(Value~IDX,data=newdata,FUN=mean)
+  meansq <- function(x) sum((x-mean(x))^2)/(length(x)-1)
+  msdata <- newdata %>% group_by(IDX) %>% summarize(across(c(Value, adjmth1, adjmth3), meansq))
+  write.csv(msdata , file = paste(DataFileDircsv,"ms",".csv"),row.names=FALSE)
+  
+  
+  #####MTH1+3 ###################################################################################
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  adjdata <- data_file
+  ctldata <- adjdata
+  
+  ctldata <- filter(ctldata,(ctldata$Cp == 1) | (ctldata$Csp > 0))
+  
+  
   
 #####################read_adjusted_data
   
@@ -647,45 +766,67 @@ if (correct)
   write.xlsx(row_col_meansAM3, file=fn, sheetName="row_col_meansAM3", append=TRUE, row.names=FALSE)
   write.xlsx(row_col_testplots_meansAM3, file=fn, sheetName="row_col_testplots_meansAM3", append=TRUE, row.names=FALSE)
      
-             
-             
-             
-#write.csv(W1, file = paste(DataFileDircsv,"read_adjusted_data.csv",sep=""),row.names=FALSE)
-#  my @cols     = split(/\t/, $line);
-#  my $year     = $cols[7];       8
-#  my $location = $cols[8];       9
-#  my $genotype = $cols[9];       10
-#  my $trait    = $cols[10];      11
-#  my $row      = $cols[2];       3
-#  my $col      = $cols[3];       4
-#  my $cp       = $cols[4];       5
-#  my $csp      = $cols[5];       5
-#  my $id = $year . "/" . $location . "/" . $trait; 16
-#  my $trait_value = $cols[11];   12
+  subplot_anova_file_data<-unadjusted_subplot_anova_stats
   
-#  for(i in 1:nrow(data_file_Adjustedm1m3)) 
-#  {
-#    if (data_file_Adjustedm1m3[i,5] == 1 || data_file_Adjustedm1m3[i,5]  > 0) {
-#      data_file_Adjustedm1m3[i,5]=1;
-#    } 
-#    if (data_file_Adjustedm1m3[i,5] == 1 ) {
-#      data_file_Adjustedm1m3[i,5]=1;
-#    }
+#ROBM
+#####################################################################################################################################################
+
+  subplot_ERROR <- read.csv(text="id,df,f,p", colClasses = c("integer", "integer", "numeric","numeric"))
+  subplot_BLOCK <- read.csv(text="id,df,f,p", colClasses = c("integer", "integer", "numeric","numeric"))
   
-  ##calculate MS column for plot
-#  for(i in 1:nrow(unadjusted_plot_anova_stats)) {
-#    #unadjusted_plot_anova_stats[i,9]
-#    if(unadjusted_plot_anova_stats[i,9] != 99 && unadjusted_plot_anova_stats[i,9] <= 0.05)
-#    {
-#      unadjusted_plot_anova_stats[i,10]<-"*"
-#    }
-#    if(unadjusted_plot_anova_stats[i,9] != 99 && unadjusted_plot_anova_stats[i,9] <= 0.01)
-#    {
-#      unadjusted_plot_anova_stats[i,10]<-"**"
-#    }
-#    unadjusted_plot_anova_stats[i,11]<-unadjusted_plot_anova_stats[i,6]/unadjusted_plot_anova_stats[i,5]
-#  }
+  ctldata$IDXGT <- paste(ctldata$IDX,"_",ctldata$Genotype,sep="")
+  control_values <- select(ctldata, c('IDXGT', 'IDX', 'Genotype', 'Value'))
+  control_values_genotype <- unique(control_values$Genotype)
+  control_values_m1 <- select(ctldata, c('IDXGT', 'IDX', 'Genotype', 'adjmth1'))
+  control_values_genotype_m1 <- unique(control_values_m1$Genotype)
+  control_values_m3 <- select(ctldata, c('IDXGT', 'IDX', 'Genotype', 'adjmth3'))
+  control_values_genotype_m3 <- unique(control_values_m3$Genotype)
   
+  
+  control_values_m13 <- select(ctldata, c('IDXGT', 'IDX', 'Genotype', 'adjmth1'))
+  #colnames(control_values_m13)[4] <- "adjmth13"
+  control_values_m13$adjmth13  <- (control_values_m13$adjmth1*100+0.5)/100
+  control_values_genotype_m13 <- unique(control_values_m3$Genotype)
+  
+  write.csv(ctldata, file = paste(DataFileDir,"ctldata",".csv",sep=""),row.names=FALSE)
+  write.csv(ctldata, file = paste(DataFileDircsv,"ctldata",".csv",sep=""),row.names=FALSE)  
+  
+  vvv <- unique(ctldata$IDXGT)
+  
+  for(i in 1:nrow(subplot_anova_file_data)) #i=1
+  {
+    if (subplot_anova_file_data[i,4] == "ERROR_WG")
+    {
+      subplot_ERROR[i,1] <- paste(subplot_anova_file_data[i,1],subplot_anova_file_data[i,2],subplot_anova_file_data[i,3],sep="-")
+      subplot_ERROR[i,2] <- subplot_anova_file_data[i,5]
+      subplot_ERROR[i,3] <- subplot_anova_file_data[i,8]
+      subplot_ERROR[i,4] <- subplot_anova_file_data[i,9]
+    }
+    else if ((subplot_anova_file_data[i,4] == "Whole_Plot"))
+    {
+      subplot_BLOCK[i,1] <- paste(subplot_anova_file_data[i,1],subplot_anova_file_data[i,2],subplot_anova_file_data[i,3],sep="-")
+      subplot_BLOCK[i,2] <- subplot_anova_file_data[i,5]
+      subplot_BLOCK[i,3] <- subplot_anova_file_data[i,8]
+      subplot_BLOCK[i,4] <- subplot_anova_file_data[i,9]
+    }
+    else if ((subplot_anova_file_data[i,4] == "Genotype"))
+    {
+      subplot_BLOCK[i,1] <- paste(subplot_anova_file_data[i,1],subplot_anova_file_data[i,2],subplot_anova_file_data[i,3],sep="-")
+      subplot_BLOCK[i,2] <- subplot_anova_file_data[i,5]
+      subplot_BLOCK[i,3] <- subplot_anova_file_data[i,8]
+      subplot_BLOCK[i,4] <- subplot_anova_file_data[i,9]
+    }
+    else
+    {
+      print  (paste("ERROR",subplot_anova_file_data[i,1],subplot_anova_file_data[i,2],subplot_anova_file_data[i,3],subplot_anova_file_data[i,4],sep="-"))
+    }
+  }
+#####################################################################################################################################################    
+  
+  
+
+  plot_anova_file_data<-unadjusted_plot_anova_stats 
+
   
   #debug
   write.csv(p_row_col_values2, file = paste(DataFileDir,"DEBUG_p_row_col_values2",".csv",sep=""),row.names=FALSE)
