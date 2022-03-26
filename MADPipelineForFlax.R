@@ -613,8 +613,7 @@ if (correct)
   write.csv(data_file , file = paste(DataFileDircsv,"data_file_mth1_mth3",".csv"),row.names=FALSE)
   #####MTH 1 and MTH3 ###################################################################################3 
   
-  
-  
+
   
   
   
@@ -665,7 +664,7 @@ if (correct)
 
   
   
-  write.csv(data_file , file = paste(DataFileDircsv,"data_file_mth1+3",".csv"),row.names=FALSE)
+  write.csv(data_file , file = paste(DataFileDircsv,"data_file_mth1+3",".csv",sep=""),row.names=FALSE)
   
   
   
@@ -695,14 +694,59 @@ if (correct)
   
   aggregate(Value~IDX,data=newdata,FUN=mean)
   meansq <- function(x) sum((x-mean(x))^2)/(length(x)-1)
-  msdata <- newdata %>% group_by(IDX) %>% summarize(across(c(Value, adjmth1, adjmth3), meansq))
-  write.csv(msdata , file = paste(DataFileDircsv,"ms",".csv"),row.names=FALSE)
-  
-  
-  #####MTH1+3 ###################################################################################
+  msdata <- newdata %>% group_by(IDX) %>% summarize(across(c(Value, adjmth1, adjmth3, adjmth13), meansq))
+  write.csv(msdata , file = paste(DataFileDircsv,"ms",".csv",sep=""),row.names=FALSE)
   
   
   
+  msdata$rm1 <- 0
+  msdata$rm3 <- 0
+  msdata$rm13 <- 0
+  msdata$PrefMeth <- "m1"
+  #####MTH1+3 ######################  
+  for(i in 1:nrow(msdata)) #i<-1
+    {       # for-loop over columns
+    #print (msdata[i,1])
+    msdata[i,6]=(msdata[i,2]/msdata[i,3] * 100 * 100 + .5)/100
+    msdata[i,7]=(msdata[i,2]/msdata[i,4] * 100 * 100 + .5)/100
+    msdata[i,8]=(msdata[i,2]/msdata[i,5] * 100 * 100 + .5)/100
+    maxmeth=c(msdata[i,6],msdata[i,7],msdata[i,8])
+    max(unlist(maxmeth))
+    if (msdata[i,6] >= msdata[i,7] & msdata[i,6] >= msdata[i,8]) { maxmeth ="m1"}
+    else if (msdata[i,7] >= msdata[i,6] & msdata[i,7] >= msdata[i,8]) { maxmeth ="m3"}
+    else if (msdata[i,8] >= msdata[i,6] & msdata[i,8] >= msdata[i,6]) { maxmeth ="m13"}
+    msdata[i,9]<-maxmeth
+    #print (i)
+   }
+  write.csv(msdata , file = paste(DataFileDircsv,"msPref",".csv",sep=""),row.names=FALSE)
+  #############################################################
+  
+  
+  ########################################################################################################CV
+  ControlPlotData <- filter(data_file,(data_file$Cp > 0))
+  ControlSubPlotData <- filter(data_file,(data_file$Csp > 0))
+ CV <- function(x) (sd(x) / mean(x) * 100)
+ msdataControlPlotDataMean <- ControlPlotData %>% group_by(IDX) %>% summarize(across(c(Value, adjmth1, adjmth3, adjmth13), mean))
+ msdataControlPlotDataCV <- ControlPlotData %>% group_by(IDX) %>% summarize(across(c(Value, adjmth1, adjmth3, adjmth13), CV))
+ msdataControlSubPlotDataMean <- ControlSubPlotData %>% group_by(IDX) %>% summarize(across(c(Value, adjmth1, adjmth3, adjmth13), mean))
+ msdataControlSubPlotDataCV <- ControlSubPlotData %>% group_by(IDX) %>% summarize(across(c(Value, adjmth1, adjmth3, adjmth13), CV))
+
+ 
+ 
+ fileConn<-file(paste(DataFileDircsv,"calculate_all_CV ",".csv",sep=""))
+ writeLines(c("Control Plot Data Coeff of Variation"), fileConn)
+ close(fileConn)
+ write.table(msdataControlPlotDataCV , file = paste(DataFileDircsv,"calculate_all_CV ",".csv",sep=""), sep = ",",row.names=FALSE, append = TRUE)
+ write("Control Plot Data MEAN",file=paste(DataFileDircsv,"calculate_all_CV ",".csv",sep=""),append=TRUE)
+ write.table(msdataControlPlotDataMean , file = paste(DataFileDircsv,"calculate_all_CV ",".csv",sep=""), sep = ",",row.names=FALSE, append = TRUE)
+ write("Control Sub Plot Data Coeff of Variation",file=paste(DataFileDircsv,"calculate_all_CV ",".csv",sep=""),append=TRUE)
+ write.table(msdataControlSubPlotDataCV , file =paste(DataFileDircsv,"calculate_all_CV ",".csv",sep="") , sep = ",",row.names=FALSE, append = TRUE)
+ write("Control Sub Plot Mean",file=paste(DataFileDircsv,"calculate_all_CV ",".csv",sep=""),append=TRUE)
+ write.table(msdataControlSubPlotDataMean , file = paste(DataFileDircsv,"calculate_all_CV ",".csv",sep=""), sep = ",",row.names=FALSE, append = TRUE)
+
+ 
+
+  ########################################################################################################CV
   
   
   
