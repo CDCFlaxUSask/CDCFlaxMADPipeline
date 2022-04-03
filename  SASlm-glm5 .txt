@@ -1,4 +1,4 @@
-$ANOVA
+$ANOVA....
 Response : Value
                   Df  Sum Sq Mean Sq F value    Pr(>F)    
 MODEL             17   295.9  17.406  7.3943 < 2.2e-16 ***
