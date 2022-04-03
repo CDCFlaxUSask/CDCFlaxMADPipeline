@@ -733,6 +733,7 @@ if (correct)
 
  
  
+ 
  fileConn<-file(paste(DataFileDircsv,"calculate_all_CV ",".csv",sep=""))
  writeLines(c("Control Plot Data Coeff of Variation"), fileConn)
  close(fileConn)
